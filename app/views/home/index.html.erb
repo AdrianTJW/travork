@@ -9,3 +9,7 @@
 <% if current_user %>
 	<%= link_to "Log out", destroy_user_session_path ,method: :delete %>
 <% end %>
+
+<%= link_to "New host", new_host_registration_path %>
+
+<%= link_to "New admin", new_admin_registration_path %>

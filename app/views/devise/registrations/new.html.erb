@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+  
   <div class="field">
     <%= f.label :fullname %><br />
     <%= f.text_field :fullname, autofocus: true %>
@@ -26,15 +26,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :contact %><br />
-    <%= f.text_field :contact, autocomplete: "on" %>
-  </div>
+  <% if resource_name == :user || resource_name == :host %>
+    <div class="field">
+      <%= f.label :contact %><br />
+      <%= f.text_field :contact, autocomplete: "on" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.file_field :image %>
-  </div>
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.file_field :image %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
