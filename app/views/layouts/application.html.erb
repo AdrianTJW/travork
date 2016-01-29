@@ -35,9 +35,12 @@
                 <li><a href="#">Three</a></li>
               </ul>
             </li>
-            <li><a href="#">Signup</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><%= link_to "New", new_user_registration_path %></li>
+            <li><%= link_to "Sign in", new_user_session_path %></li>
+            <li><% if current_user %>
+              <%= link_to "Log out", destroy_user_session_path ,method: :delete %>
+              <% end %>
+            </li>
           </ul>
         </div>
       </div>
