@@ -12,4 +12,22 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+/*Desktop*/
+.top-bar,
+.top-bar ul {
+  background-color: #1abc9c;
+}
+
+
+
+
+/*Mobile*/
+.title-bar {
+  background: #1abc9c;
+  color: #fefefe;
+  padding: 0.5rem;
+}
+
