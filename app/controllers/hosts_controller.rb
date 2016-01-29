@@ -6,6 +6,11 @@ class HostsController < ApplicationController
   # GET /hosts.json
   def index
     @hosts = Host.all
+    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+      market.infowindow user.title
+    end
   end
 
   # GET /hosts/1
