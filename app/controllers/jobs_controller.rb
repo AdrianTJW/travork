@@ -5,6 +5,11 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all
+    @hash = Gmaps4rails.build_markers(@jobs) do |job, marker|
+      marker.lat job.latitude
+      marker.lng job.longitude
+      marker.infowindow job.company_name
+    end
   end
 
   # GET /jobs/1
@@ -69,6 +74,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+      params.require(:job).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id, :latitude, :longitude)
     end
 end
