@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <%= javascript_include_tag "vendor/modernizr" %>
   </head>
 
   <body>
@@ -21,7 +22,7 @@
       <div class="top-bar" id="example-menu">
         <div class="top-bar-left">
           <ul class="menu">
-            <li class="menu-text">TRAVORK</li>
+            <a href="/"><li class="menu-text">TRAVORK</li></a>
             
           </ul>
         </div>
