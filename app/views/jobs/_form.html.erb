@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :images %><br>
-    <%= f.text_field :images %>
+    <%= f.file_field :images %>
   </div>
   <div class="field">
     <%= f.label :start_date %><br>
@@ -50,18 +50,6 @@
   <div class="field">
     <%= f.label :end_date %><br>
     <%= f.date_select :end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :host_id %><br>
-    <%= f.number_field :host_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :content_id %><br>
-    <%= f.number_field :content_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

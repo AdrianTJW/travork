@@ -15,6 +15,7 @@ class JobsController < ApplicationController
   # GET /jobs/new
   def new
     @job = Job.new
+    
   end
 
   # GET /jobs/1/edit
@@ -25,6 +26,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
+    @job.update(host_id: current_host.id)
 
     respond_to do |format|
       if @job.save
@@ -40,8 +42,9 @@ class JobsController < ApplicationController
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
   def update
+    byebug
     respond_to do |format|
-      if @job.update(job_params)
+      if @job.update(send("#{@job.type.underscore.to_sym}_params"))
         format.html { redirect_to @job, notice: 'Job was successfully updated.' }
         format.json { render :show, status: :ok, location: @job }
       else
@@ -56,19 +59,35 @@ class JobsController < ApplicationController
   def destroy
     @job.destroy
     respond_to do |format|
-      format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
+      format.html { redirect_to @job, notice: 'Job was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_job
-      @job = Job.find(params[:id])
-    end
+  def set_job
+    @job = Job.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def job_params
-      params.require(:job).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def job_params
+    params.require(:job).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+  end
+
+  def working_holiday_params
+    params.require(:working_holiday).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+  end
+
+  def internship_params
+    params.require(:internship).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+  end
+
+  def volunteering_params
+    params.require(:volunteering).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+  end
+
+  def bootcamp_params
+    params.require(:bootcamp).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
+  end
 end
