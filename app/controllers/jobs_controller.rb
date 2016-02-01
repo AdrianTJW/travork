@@ -5,6 +5,11 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all
+    @hash = Gmaps4rails.build_markers(@jobs) do |job, marker|
+      marker.lat job.latitude
+      marker.lng job.longitude
+      marker.infowindow job.company_name
+    end
   end
 
   # GET /jobs/1
@@ -90,4 +95,5 @@ class JobsController < ApplicationController
   def bootcamp_params
     params.require(:bootcamp).permit(:company_name, :description, :address, :country, :city, :type, :job_name, :images, :start_date, :end_date, :host_id, :user_id, :content_id)
   end
+
 end

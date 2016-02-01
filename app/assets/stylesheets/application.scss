@@ -1,0 +1,189 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+//= require foundation_and_overrides
+
+ *= require foundation_and_overrides
+
+ */
+/*Desktop*/
+/*General*/
+html, body {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+/*nav*/
+.top-top {  
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.top-bar,
+.top-bar ul {
+  background-color: #1abc9c;
+}
+/*Menu*/
+.menu > li {
+    color: #fff;
+}
+
+.menu > li > a {   
+    font-weight: bold;
+}
+.menu > li > a > img, .menu > li > a > i {
+    
+    height: 1.5rem;
+}
+
+/*Link*/
+a, a:visited {
+  color: #fff;
+}
+a:hover {
+    color: #353535;
+    background-color: rgba(232, 232, 232, 0.52);
+}
+/*body*/
+.contain{margin-top: 50px;}
+
+@media only screen and (max-width: 40em) {.image{
+	background:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://www.ultimate.travel/wp-content/uploads/2015/05/why-start-a-travel-blog-1024x630.jpg") center center repeat-x;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    padding: 2.5rem 0 4.5rem;
+    text-align: center;
+    overflow: visible;
+    min-height: 50%;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {.image{
+  background:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://www.ultimate.travel/wp-content/uploads/2015/05/why-start-a-travel-blog-1024x630.jpg") center center repeat-x;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    padding: 2.5rem 0 4.5rem;
+    text-align: center;
+    overflow: visible;
+    min-height: 80%;
+  }
+}
+@media only screen and (min-width: 64.063em) {.image{
+  background:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://www.ultimate.travel/wp-content/uploads/2015/05/why-start-a-travel-blog-1024x630.jpg") center center repeat-x;
+    background-size: 100% auto;
+    max-width: 100rem;
+    position: relative;
+    padding: 2.5rem 0 4.5rem;
+    text-align: center;
+    overflow: visible;
+    min-height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    background-repeat: no-repeat;
+  }
+}
+.middle{
+  color:white;
+  position:absolute;
+  top:20%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.bottom{
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255, 0.52);
+}
+.mid{
+  padding
+  : 0.9375rem;
+}
+
+@media only screen and (max-width: 40em) {.mid{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top:0.1rem;
+  padding-bottom:0rem;
+  }
+}
+
+.show {
+  position:relative;
+  width:100%;
+}
+.show img{
+  width:100%;
+}
+@media only screen and (max-width: 64.063em) {.show p{
+   position: absolute; 
+   bottom: -1.6rem; 
+   left: 2rem; 
+   width: 100%; 
+   font-size: 6rem;
+   color:white;
+  }
+}
+
+@media only screen and (min-width: 64em) {.show p{
+   position: absolute; 
+   top: -1.6rem; 
+   left: 2rem; 
+   width: 100%; 
+   font-size: 4rem;
+   color:white;
+ }
+}
+.home_size{
+  padding-left:1.5em;
+  padding-right: 1.5em;
+}
+.round{
+  border-radius:2em;
+}
+.login-box {
+  background: #fff;
+  border: 1px solid #ddd; 
+  margin: 100px 0;
+  padding: 40px 20px 0 20px;
+}
+/*Footer*/
+#footer {
+width: 100%;
+height: 10%;
+background-color: #1abc9c;
+text-align: center;
+color: #fff; /* choose any height */
+}
+
+#footer p{
+	font-size: 100%;
+}
+
+
+/*Mobile*/
+.title-bar {
+  background: #1abc9c;
+  color: #fefefe;
+  padding: 0.5rem;
+}
+
