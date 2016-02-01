@@ -1,11 +1,68 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
 
 
-<%= link_to "New", new_user_registration_path %>
 
-<%= link_to "Sign in", new_user_session_path %>
-
-<% if current_user %>
-	<%= link_to "Log out", destroy_user_session_path ,method: :delete %>
-<% end %>
+<div class="row image">
+	<div class="large-12 columns medium-12 small-12">
+		<div class="middle">
+    		<h1>TRAVEL FOR FREE</h1>
+    		<p> View the world in a meaningful way!</p>
+    	</div>
+    	<div class="bottom">
+			<form accept-charset="UTF-8" action="/search" method="get">
+				<div class="large-4 medium-4 small-12 columns mid">
+					<input id="q" class="large" name="q" type="text" />
+				</div>
+				<div class="large-4 medium-4 small-12 columns mid ">
+					<input id="q" class="large" name="q" type="text" />
+				</div>
+				<div class="large-4 medium-4 small-12 columns mid">
+					<input name="commit"  class ="expanded button  success round" type="submit" value="Search" />
+				</div>
+			</form>
+        </div>
+    </div>
+  </div>
+  <!-- Second Band (Image Left with Text) -->
+ 
+  <div class="row">
+  	<div class="large-12 medium-12 small-12 columns">
+  		<h2>Get to travel while working at ...</h2>
+  	</div>
+  	<div class="home_size">
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDyyp4_fmVCZP6y9x0AOYrvdtAQx7GSRCyCPLjb4pBHDPvWrsk3Q">
+	      <p>test</p>
+	    </div>
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDyyp4_fmVCZP6y9x0AOYrvdtAQx7GSRCyCPLjb4pBHDPvWrsk3Q">
+	      <p>qwe123</p>
+	    </div>
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="http://placehold.it/400x300&text=[img]">
+	    </div>
+	</div>
+  </div>
+  <br>
+ 
+ 
+  <!-- Third Band (Image Right with Text) -->
+ 
+  <div class="row">
+  	<div class="large-12 medium-12 small-12 columns">
+  		<h2>Have your internship at...</h2>
+  	</div>
+  	<div class="home_size">
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDyyp4_fmVCZP6y9x0AOYrvdtAQx7GSRCyCPLjb4pBHDPvWrsk3Q">
+	      <p>test</p>
+	    </div>
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRDyyp4_fmVCZP6y9x0AOYrvdtAQx7GSRCyCPLjb4pBHDPvWrsk3Q">
+	      <p>qwe123</p>
+	    </div>
+	    <div class="large-4 medium-12 small-12 columns show">
+	      <img src="http://placehold.it/400x300&text=[img]">
+	    </div>
+	</div>
+  </div>
+  <br>
