@@ -25,8 +25,16 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# login signup password authentication gem
 gem 'devise'
+# hide app key and app secret gem
+gem 'figaro'
+# facebook login gem
+gem 'omniauth-facebook'
+# google login gem
+gem 'omniauth-google-oauth2'
+# payment gateway
+gem 'braintree'
 
 
 gem 'geocoder'

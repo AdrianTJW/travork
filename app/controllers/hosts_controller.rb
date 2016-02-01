@@ -1,6 +1,5 @@
 class HostsController < ApplicationController
   before_action :set_host, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_host!
 
   # GET /hosts
   # GET /hosts.json

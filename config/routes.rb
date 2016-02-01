@@ -2,10 +2,22 @@ Rails.application.routes.draw do
   # get 'home/index'
 
   resources :jobs
+  resources :working_holidays, controller: 'jobs', type: 'WorkingHoliday'
+  resources :internships, controller: 'jobs', type: 'Internship'
+  resources :volunteerings, controller: 'jobs', type: 'Volunteering'
+  resources :bootcamps, controller: 'jobs', type: 'Bootcamp'
+
   resources :contents
   devise_for :admins
   devise_for :hosts
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  get "/user/profile", to: "user#profile"
+  get "/host/profile", to: "host#profile"
+  # devise_scope :user do
+  #   get "/auth/:provider/callback" => "devise/sessions#create"
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
