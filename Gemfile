@@ -27,11 +27,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
-<<<<<<< Updated upstream
-=======
+
 gem 'geocoder'
 
->>>>>>> Stashed changes
+
 gem 'gmaps4rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
